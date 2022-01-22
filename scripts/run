@@ -1,0 +1,13 @@
+#!/usr/bin/env node
+
+const np = require('path');
+const pkg = require('../package.json');
+const { program } = require('commander');
+
+program
+    .version(pkg.version)
+    .description('Run Scripts about build, test')
+    .command('build', 'tsc build')
+    .command('test', 'jest test');
+
+program.parse(process.argv);

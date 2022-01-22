@@ -1,0 +1,49 @@
+@use './constants' as const;
+
+.wrapper {
+  height: calc(100vh - #{const.$HEADER_HEIGHT});
+}
+
+.header {
+  color: #fff;
+  padding: 0 20px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .header-prefix {
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  .header-suffix {
+    .item-suffix {
+      margin: 0 10px;
+    }
+  }
+}
+
+.demo-title {
+  color: #3ac70f;
+  font-size: 100px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sider-menu {
+  height: 100%;
+}
+
+.layout-container {
+  height: 100%;
+}
+
+.layout {
+}
+
+.layout-content {
+  min-height: 80px;
+}

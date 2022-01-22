@@ -1,0 +1,19 @@
+#!/usr/bin/env node
+
+const np = require('path');
+const { execSync } = require('child_process');
+
+const restArgs = process.argv.slice(2);
+
+console.log(process.cwd());
+
+const root = np.join(__dirname, '..');
+
+try {
+  execSync(`npx jest ${process.cwd()} ${restArgs.join(' ')}`, {
+    stdio: 'inherit',
+    cwd: root,
+  });
+} catch (ex) {
+  process.exitCode = ex.status;
+}
